@@ -106,7 +106,6 @@ ComponentResult karoke::Initialize()
   }
 }
 
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	karoke::GetParameterValueStrings
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,12 +116,11 @@ OSStatus karoke::GetParameterValueStrings(AudioUnitScope		    inScope,
   return kAudioUnitErr_InvalidProperty;
 }
 
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	karoke::GetParameterInfo
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-OSStatus karoke::GetParameterInfo(AudioUnitScope		inScope,
-                                  AudioUnitParameterID	inParameterID,
+OSStatus karoke::GetParameterInfo(AudioUnitScope          inScope,
+                                  AudioUnitParameterID    inParameterID,
                                   AudioUnitParameterInfo	&outParameterInfo )
 {
   OSStatus result = noErr;
@@ -151,7 +149,6 @@ OSStatus karoke::GetParameterInfo(AudioUnitScope		inScope,
     result = kAudioUnitErr_InvalidParameter;
   }
 
-
   return result;
 }
 
@@ -159,10 +156,10 @@ OSStatus karoke::GetParameterInfo(AudioUnitScope		inScope,
 //	karoke::GetPropertyInfo
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 OSStatus karoke::GetPropertyInfo (AudioUnitPropertyID	inID,
-                                  AudioUnitScope		inScope,
-                                  AudioUnitElement	inElement,
-                                  UInt32 &		outDataSize,
-                                  Boolean &		outWritable)
+                                  AudioUnitScope      inScope,
+                                  AudioUnitElement    inElement,
+                                  UInt32              &outDataSize,
+                                  Boolean             &outWritable)
 {
   return AUEffectBase::GetPropertyInfo (inID, inScope, inElement, outDataSize, outWritable);
 }
@@ -171,9 +168,9 @@ OSStatus karoke::GetPropertyInfo (AudioUnitPropertyID	inID,
 //	karoke::GetProperty
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 OSStatus karoke::GetProperty(	AudioUnitPropertyID inID,
-                              AudioUnitScope 		inScope,
-                              AudioUnitElement 	inElement,
-                              void              *outData )
+                              AudioUnitScope      inScope,
+                              AudioUnitElement    inElement,
+                              void                *outData )
 {
   return AUEffectBase::GetProperty (inID, inScope, inElement, outData);
 }
@@ -181,10 +178,10 @@ OSStatus karoke::GetProperty(	AudioUnitPropertyID inID,
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	karoke::ProcessBufferLists
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-OSStatus karoke::ProcessBufferLists	(AudioUnitRenderActionFlags&	iFlags,
-                                     const 	AudioBufferList& 	inBufferList,
-                                     AudioBufferList&	outBufferList,
-                                     UInt32			iFrames)
+OSStatus karoke::ProcessBufferLists	(AudioUnitRenderActionFlags &iFlags,
+                                     const 	AudioBufferList     &inBufferList,
+                                     AudioBufferList            &outBufferList,
+                                     UInt32                     iFrames)
 {
   float *leftSample = ((float*)inBufferList.mBuffers[0].mData);
   float *rightSample = ((float*)inBufferList.mBuffers[1].mData);
