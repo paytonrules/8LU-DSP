@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0730F04C124C5C4100EE0AA7 /* low_pass_filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0730F04B124C5C4100EE0AA7 /* low_pass_filter.h */; };
+		0730F0B7124C5FC500EE0AA7 /* CircularBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0730F0AC124C5FC500EE0AA7 /* CircularBuffer.cpp */; };
+		0730F0BA124C5FC500EE0AA7 /* FirFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0730F0AF124C5FC500EE0AA7 /* FirFilter.cpp */; };
+		0730F0BD124C5FC500EE0AA7 /* filterBuildTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0730F0B3124C5FC500EE0AA7 /* filterBuildTime.cpp */; };
+		0730F0C6124C5FFB00EE0AA7 /* CircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0730F0C2124C5FFB00EE0AA7 /* CircularBuffer.h */; };
+		0730F0C7124C5FFB00EE0AA7 /* FirFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0730F0C3124C5FFB00EE0AA7 /* FirFilter.h */; };
+		0730F0C8124C5FFB00EE0AA7 /* filterBuildTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 0730F0C5124C5FFB00EE0AA7 /* filterBuildTime.h */; };
 		3EEA126E089847F5002C6BFC /* CAVectorUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA126B089847F5002C6BFC /* CAVectorUnit.cpp */; };
 		3EEA126F089847F5002C6BFC /* CAVectorUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EEA126C089847F5002C6BFC /* CAVectorUnit.h */; };
 		3EEA1270089847F5002C6BFC /* CAVectorUnitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EEA126D089847F5002C6BFC /* CAVectorUnitTypes.h */; };
@@ -66,6 +73,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0730F04B124C5C4100EE0AA7 /* low_pass_filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = low_pass_filter.h; sourceTree = "<group>"; };
+		0730F0AC124C5FC500EE0AA7 /* CircularBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CircularBuffer.cpp; sourceTree = "<group>"; };
+		0730F0AF124C5FC500EE0AA7 /* FirFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirFilter.cpp; sourceTree = "<group>"; };
+		0730F0B3124C5FC500EE0AA7 /* filterBuildTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filterBuildTime.cpp; sourceTree = "<group>"; };
+		0730F0C2124C5FFB00EE0AA7 /* CircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularBuffer.h; sourceTree = "<group>"; };
+		0730F0C3124C5FFB00EE0AA7 /* FirFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirFilter.h; sourceTree = "<group>"; };
+		0730F0C5124C5FFB00EE0AA7 /* filterBuildTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filterBuildTime.h; sourceTree = "<group>"; };
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3EEA126B089847F5002C6BFC /* CAVectorUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAVectorUnit.cpp; sourceTree = "<group>"; };
 		3EEA126C089847F5002C6BFC /* CAVectorUnit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAVectorUnit.h; sourceTree = "<group>"; };
@@ -129,6 +143,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0730F0A9124C5FC500EE0AA7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0730F0AA124C5FC500EE0AA7 /* fir */,
+				0730F0B2124C5FC500EE0AA7 /* util */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		0730F0AA124C5FC500EE0AA7 /* fir */ = {
+			isa = PBXGroup;
+			children = (
+				0730F0C0124C5FFB00EE0AA7 /* include */,
+				0730F0AC124C5FC500EE0AA7 /* CircularBuffer.cpp */,
+				0730F0AF124C5FC500EE0AA7 /* FirFilter.cpp */,
+			);
+			path = fir;
+			sourceTree = "<group>";
+		};
+		0730F0B2124C5FC500EE0AA7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				0730F0B3124C5FC500EE0AA7 /* filterBuildTime.cpp */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		0730F0C0124C5FFB00EE0AA7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0730F0C1124C5FFB00EE0AA7 /* fir */,
+				0730F0C4124C5FFB00EE0AA7 /* util */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		0730F0C1124C5FFB00EE0AA7 /* fir */ = {
+			isa = PBXGroup;
+			children = (
+				0730F0C2124C5FFB00EE0AA7 /* CircularBuffer.h */,
+				0730F0C3124C5FFB00EE0AA7 /* FirFilter.h */,
+			);
+			path = fir;
+			sourceTree = "<group>";
+		};
+		0730F0C4124C5FFB00EE0AA7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				0730F0C5124C5FFB00EE0AA7 /* filterBuildTime.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		089C166AFE841209C02AAC07 /* karoke */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +230,7 @@
 		08FB77ADFE841716C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0730F0A9124C5FC500EE0AA7 /* src */,
 				8BA05A56072072A900365D66 /* AU Source */,
 				8BA05AEB0720742700365D66 /* PublicUtility */,
 				8BA05A7D072073D200365D66 /* AUPublic */,
@@ -181,6 +249,7 @@
 		8BA05A56072072A900365D66 /* AU Source */ = {
 			isa = PBXGroup;
 			children = (
+				0730F04B124C5C4100EE0AA7 /* low_pass_filter.h */,
 				8BC6025B073B072D006C4272 /* karoke.h */,
 				8BA05A660720730100365D66 /* karoke.cpp */,
 				8BA05A670720730100365D66 /* karoke.exp */,
@@ -293,6 +362,10 @@
 				3EEA126F089847F5002C6BFC /* CAVectorUnit.h in Headers */,
 				3EEA1270089847F5002C6BFC /* CAVectorUnitTypes.h in Headers */,
 				F7C347F10ECE5AF8008ADFB6 /* AUBaseHelper.h in Headers */,
+				0730F04C124C5C4100EE0AA7 /* low_pass_filter.h in Headers */,
+				0730F0C6124C5FFB00EE0AA7 /* CircularBuffer.h in Headers */,
+				0730F0C7124C5FFB00EE0AA7 /* FirFilter.h in Headers */,
+				0730F0C8124C5FFB00EE0AA7 /* filterBuildTime.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +470,9 @@
 				8BA05B070720754400365D66 /* CAAUParameter.cpp in Sources */,
 				3EEA126E089847F5002C6BFC /* CAVectorUnit.cpp in Sources */,
 				F7C347F00ECE5AF8008ADFB6 /* AUBaseHelper.cpp in Sources */,
+				0730F0B7124C5FC500EE0AA7 /* CircularBuffer.cpp in Sources */,
+				0730F0BA124C5FC500EE0AA7 /* FirFilter.cpp in Sources */,
+				0730F0BD124C5FC500EE0AA7 /* filterBuildTime.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,8 +497,13 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				LIBRARY_STYLE = Bundle;
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Examples/CoreAudio/AudioUnits/AUPublic/AUBase\"";
@@ -437,8 +518,13 @@
 				EXPORTED_SYMBOLS_FILE = karoke.exp;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				LIBRARY_STYLE = Bundle;
 				OTHER_LDFLAGS = "-bundle";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Examples/CoreAudio/AudioUnits/AUPublic/AUBase\"";

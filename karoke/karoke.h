@@ -41,6 +41,7 @@
 */
 #include "AUEffectBase.h"
 #include "karokeVersion.h"
+#include "FirFilter.h"
 
 #if AU_DEBUG_DISPATCHER
 	#include "AUDebugDispatcher.h"
@@ -67,6 +68,8 @@ enum {
 #pragma mark ____karoke
 class karoke : public AUEffectBase
 {
+private: 
+  FirFilter *itsBassFilter;
 public:
 	karoke(AudioUnit component);
 #if AU_DEBUG_DISPATCHER
